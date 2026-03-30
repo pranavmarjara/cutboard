@@ -1,0 +1,212 @@
+clapshot-client (0.10.0) unstable; urgency=low
+
+  * New feature: "Sort by Timecode" toggle for comments
+  * New feature: Real-time folder refresh for non-owner clients observing
+    a folder when changes occur
+  * Fix: Video playback on Safari (subtitle track and TouchEvent issues,
+    closes #105)
+  * Fix: Use JPEG fallback when WEBP thumbnails not supported (Safari)
+  * Improvement: Audio volume setting now persists longer (max duration
+    instead of 12h default)
+  * Add Debian 13 (Trixie) .deb build support
+
+ -- Jarno Elonen <elonen@iki.fi>  Fri, 27 Mar 2026 12:00:00 +0200
+
+clapshot-client (0.9.2) unstable; urgency=low
+
+  * New feature: Comment export to EDL, Premiere XML, CSV, SRT, and OTIO formats
+  * New export dialog UI in NavBar
+
+ -- Jarno Elonen <elonen@iki.fi>  Tue, 07 Jan 2026 12:00:00 +0200
+
+clapshot-client (0.9.1) bookworm; urgency=low
+
+  * New feature: Hybrid video decoder for frame-accurate stepping
+  * New feature: Internationalization support with Chinese and Finnish translations
+  * Documentation improvements
+
+ -- Jarno Elonen <elonen@iki.fi>  Sun, 29 Dec 2025 12:00:00 +0200
+
+clapshot-client (0.9.0) bookworm; urgency=low
+
+  * New feature: Direct-to-comment share button
+  * Update Svelte, Vite, and Vitest to latest versions
+  * Update Flowbite packages and FontAwesome to v7
+  * Fix FontAwesome 7 icon overflow with --fa-width CSS variable
+  * Convert deprecated Svelte event directives to modern syntax
+  * Fix: Progress percentage from Organizer now properly displayed
+  * Update npm dependencies (happy-dom, vite)
+  * Fix test timing issues after dependency updates
+
+ -- Jarno Elonen <elonen@iki.fi>  Wed, 13 Nov 2025 18:00:00 +0200
+
+clapshot-client (0.8.7) bookworm; urgency=low
+
+  * Fix navbar dropdown menu CSS styling issues and upgrade Flowbite-Svelte
+  * Fix non-ASCII filename uploads
+  * Fix cancelAnimationFrame error in client test suite teardown
+
+ -- Jarno Elonen <elonen@iki.fi>  Wed, 18 Sep 2025 18:21:00 +0300
+
+clapshot-client (0.8.6) bookworm; urgency=low
+
+  * Upgrade to Svelte 5 and Vite 6
+  * Add unit and integration tests
+  * Update dependencies (brace-expansion)
+  * Improve nginx configuration for better caching
+
+ -- Jarno Elonen <elonen@iki.fi>  Mon, 23 Jun 2025 12:00:00 +0300
+
+clapshot-client (0.8.5) bookworm; urgency=low
+
+  * New feature: Folder sharing via secret URLs
+  * Store audio volume in cookies
+  * Various bug fixes
+
+ -- Jarno Elonen <elonen@iki.fi>  Tue, 27 May 2025 17:55:52 +0300
+
+clapshot-client (0.8.2) bookworm; urgency=low
+
+  * (No changes, follow server versioning)
+
+ -- Jarno Elonen <elonen@iki.fi>  Mon, 19 Aug 2024 22:30:00 +0200
+
+clapshot-client (0.8.1) bookworm; urgency=low
+
+  * New feature: configurable branding (logo and name)
+  * New feature: import EDLs as comments
+  * Fix: Folder was not visible containing >= 3 items
+  * Fix/feature: Allow comments with just a drawing, no text
+  * Demonstrate how to have multiple admin users in htadmin demo (see nginx conf example)
+  * UI: move video player actions to a burger menu
+  * Remove emoji picker (slow, and OSs support it now)
+
+ -- Jarno Elonen <elonen@iki.fi>  Thu, 18 Jul 2024 21:20:00 +0200
+
+clapshot-client (0.8.0) bookworm; urgency=low
+
+  * Support for subtitles
+  * Support for custom loop ranges
+  * Seek audio files by clicking on waveform
+  * Show popup on server/client version mismatch
+
+ -- Jarno Elonen <elonen@iki.fi>  Fri, 7 Jun 2024 11:49:00 +0200
+
+clapshot-client (0.7.1) bookworm; urgency=low
+
+  * (Nothing, just following server's version numbering.)
+
+ -- Jarno Elonen <elonen@iki.fi>  Sun, 2 Jun 2024 11:15:00 +0200
+
+clapshot-client (0.7.0) bookworm; urgency=high
+
+  * Support for audio and images in addition to videos
+  * Small UI improvements
+  * Bug fixes
+
+ -- Jarno Elonen <elonen@iki.fi>  Mon, 27 May 2024 21:59:00 +0200
+
+clapshot-client (0.6.1) bookworm; urgency=high
+
+  * (Nothing, just following server's version numbering.)
+
+ -- Jarno Elonen <elonen@iki.fi>  Sat, 20 May 2024 12:20:00 +0200
+
+clapshot-client (0.6.0) bookworm; urgency=low
+
+  * Support for folders and custom UI views (requires an Organizer plugin in the backend)
+  * 'Download original video' button in the player
+  * New communication API, lots of changes under the hood
+  * Connection errors now shown in the "connecting..." page
+  * Updated dependencies, bump Svelte and Vite versions
+
+ -- Jarno Elonen <elonen@iki.fi>  Sat, 18 May 2024 17:00:00 +0200
+
+clapshot-client (0.5.6) bullseye; urgency=low
+
+  * Fix video list row spacing
+  * Show upload form before video list
+
+ -- Jarno Elonen <elonen@iki.fi>  Thu, 19 Oct 2023 21:04:00 +0200
+
+clapshot-client (0.5.5) bullseye; urgency=low
+
+  * Make client reload on auth error to help (re)show login screen
+
+ -- Jarno Elonen <elonen@iki.fi>  Wed, 30 Mar 2023 13:35:00 +0200
+
+clapshot-client (0.5.4) bullseye; urgency=low
+
+  * No changes, just follow server version
+
+ -- Jarno Elonen <elonen@iki.fi>  Wed, 28 Mar 2023 13:13:00 +0200
+
+clapshot-client (0.5.3) bullseye; urgency=low
+
+  * Support for basic auth logout and custom user menu items.
+  * Docker demo with basic auth and 'htadmin'
+  * Add /api/health endpoint for health checks
+  * Bugfix: don't spam server log about WS disconnects
+
+ -- Jarno Elonen <elonen@iki.fi>  Wed, 15 Feb 2023 22:30:00 +0000
+
+clapshot-client (0.5.2) bullseye; urgency=low
+
+  * Feature: Replace HTTP upload button with a drop zone.
+
+ -- Jarno Elonen <elonen@iki.fi>  Sun, 12 Feb 2023 22:12:00 +0000
+
+clapshot-client (0.5.1) bullseye; urgency=low
+
+  * New feature: thumbnails with scrub preview.
+
+ -- Jarno Elonen <elonen@iki.fi>  Fri, 10 Feb 2023 16:24:00 +0000
+
+clapshot-client (0.5.0) bullseye; urgency=low
+
+  * New feature: Support for HTTP uploading multiple videos at once.
+  * New feature: Rename clips.
+  * Bugfix: User notifications were often shown twice.
+  * Bugfix: Failed upload removed old video from disk in certain cases.
+
+ -- Jarno Elonen <elonen@iki.fi>  Wed, 8 Feb 2023 22:59:00 +0000
+
+clapshot-client (0.4.1) bullseye; urgency=low
+
+  * New feature: show comment pins on timeline.
+
+ -- Jarno Elonen <elonen@iki.fi>  Sun, 22 Jan 2023 19:47:00 +0000
+
+clapshot-client (0.4.0) bullseye; urgency=low
+
+  * New feature: collaborative review mode.
+
+ -- Jarno Elonen <elonen@iki.fi>  Fri, 13 Jan 2023 23:22:00 +0000
+
+clapshot-client (0.3.1) bullseye; urgency=low
+
+  * Add video delete to GUI.
+
+ -- Jarno Elonen <elonen@iki.fi>  Wed, 27 Nov 2022 21:48:00 +0000
+
+clapshot-client (0.3.0) bullseye; urgency=low
+
+  * Fixes for drawings and Rust server.
+
+clapshot-client (0.2.4) bullseye; urgency=low
+
+  * More robust UI layout.
+
+ -- Jarno Elonen <elonen@iki.fi>  Wed, 5 Oct 2022 15:30:00 +0000
+
+clapshot-client (0.2.2) bullseye; urgency=low
+
+  * New (prerelease) upstream version
+
+ -- Jarno Elonen <elonen@iki.fi>  Fri, 23 Sep 2022 07:29:23 +0000
+
+clapshot-client (0.1.0) bullseye; urgency=low
+
+  * Initial debian packaging
+
+ -- Jarno Elonen <elonen@iki.fi>  Tue, 20 Sep 2022 16:46:46 +0300

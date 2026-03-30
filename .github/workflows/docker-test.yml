@@ -1,0 +1,52 @@
+name: Build and test
+
+on:
+  push:
+    branches: [ "**" ]
+  pull_request:
+    branches: [ "master" ]
+  workflow_dispatch:
+    inputs:
+      build_deb:
+        description: 'Also build .deb packages'
+        required: false
+        default: false
+        type: boolean
+
+jobs:
+
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v4
+    
+    - name: Build and test all components
+      run: make test
+      
+    - name: Build .deb packages (if requested)
+      if: github.event.inputs.build_deb == 'true'
+      run: make debian-docker
+      
+    - name: List built packages
+      if: github.event.inputs.build_deb == 'true'
+      run: ls -la dist_deb/
+      
+    - name: Upload .deb packages
+      if: github.event.inputs.build_deb == 'true'
+      uses: actions/upload-artifact@v4
+      with:
+        name: test-debian-packages
+        path: ./dist_deb/*.deb
+        retention-days: 30
+      
+    - name: Upload test artifacts on failure
+      uses: actions/upload-artifact@v4
+      if: failure()
+      with:
+        name: test-logs
+        path: |
+          server/organizer_tests.log
+          server/target/debug/deps/
+        retention-days: 7

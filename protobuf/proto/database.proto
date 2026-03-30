@@ -1,0 +1,101 @@
+syntax = "proto3";
+package clapshot.organizer;
+
+import public "common.proto";
+
+message DbGetMediaFilesRequest {
+    optional DbPaging paging = 1;
+    oneof filter {
+        Empty all = 10;             // All media files in the database. Make sure to set paging.
+        IdList ids = 11;            // List of media file ids
+        string user_id = 12;        // Owner of the media file
+    }
+}
+
+message DbGetCommentsRequest {
+    optional DbPaging paging = 1;
+    oneof filter {
+        Empty all = 10;             // All comments in the database. Make sure to set paging.
+        IdList ids = 11;            // List of comment ids
+        string user_id = 12;        // User who posted the comment
+        string media_file_id = 13;  // MediaFile the comments are attached to
+    }
+}
+
+message DbGetUserMessagesRequest {
+    optional DbPaging paging = 1;
+    oneof filter {
+        Empty all = 10;             // All user messages in the database. Make sure to set paging.
+        IdList ids = 11;            // List of message ids
+        string user_id = 12;        // Message recipient
+        string media_file_id = 13;  // MediaFile the message refers to
+        string comment_id = 14;     // Comment the message refers to
+    }
+}
+
+// ----------------------------------------
+
+// Add or replace objects in the database.
+// If an ID is not specified, a new object will be created,
+// otherwise the existing object will be replaced.
+message DbUpsertRequest {
+    repeated MediaFile media_files = 1;
+    repeated Subtitle subtitles = 2;
+    repeated Comment comments = 3;
+    repeated UserMessage user_messages = 4;
+}
+
+message DbUpsertResponse {
+    // These will have IDs, creation timestamps, etc. filled in.
+    repeated MediaFile media_files = 1;
+    repeated Subtitle subtitles = 2;
+    repeated Comment comments = 3;
+    repeated UserMessage user_messages = 4;
+}
+
+message DbDeleteRequest {
+    repeated string media_file_ids = 1;
+    repeated string subtitle_ids = 2;
+    repeated string comment_ids = 3;
+    repeated string user_message_ids = 4;
+}
+
+message DbDeleteResponse {
+    uint32 media_files_deleted = 1;
+    uint32 subtitles_deleted = 2;
+    uint32 comments_deleted = 3;
+    uint32 user_messages_deleted = 4;
+}
+
+// ----------------------------------------
+
+message DbPaging {
+    uint32 page_num = 1;    // Page number (0 = first page)
+    uint32 page_size = 2;   // Number of items per page
+}
+
+message IdList {
+    repeated string ids = 1;
+}
+
+// ---- Response messages ---
+
+message DbMediaFileList {
+    repeated MediaFile items = 1;
+    optional DbPaging paging = 2;  // Paging info for the result. Some queries may not do paging even if requested, so check for presence.
+}
+
+message DbSubtitleList {
+    repeated Subtitle items = 1;
+    optional DbPaging paging = 2;
+}
+
+message DbCommentList {
+    repeated Comment items = 1;
+    optional DbPaging paging = 2;
+}
+
+message DbUserMessageList {
+    repeated UserMessage items = 1;
+    optional DbPaging paging = 2;
+}

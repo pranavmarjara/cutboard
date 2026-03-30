@@ -1,0 +1,119 @@
+You are a senior frontend engineer and product designer working at a top-tier company like Stripe, Linear, or Vercel.
+
+Your task is to completely redesign and rebuild the UI of this project from scratch with a modern, premium, minimal, and highly polished design system.
+
+⚠️ IMPORTANT:
+Do NOT make small tweaks. This is a FULL redesign. Ignore existing UI structure if needed.
+
+---
+
+🎯 DESIGN GOALS:
+
+- Clean, modern, and premium feel (inspired by Linear, Notion, Vercel, Apple)
+- Strong typography hierarchy
+- Smooth animations and transitions
+- Dark mode first (with optional light mode)
+- Focus on simplicity + usability
+- Make it feel like a SaaS product worth paying for
+
+---
+
+🎨 DESIGN SYSTEM:
+
+- Use TailwindCSS for styling
+- Use a consistent spacing system (8px grid)
+- Use subtle shadows, rounded corners (xl/2xl), and glassmorphism where appropriate
+- Font: Inter or similar modern sans-serif
+- Color palette:
+  - Background: near-black (#0B0F14 or similar)
+  - Primary: subtle blue/purple gradient
+  - Text: soft whites and grays (not pure white)
+  - Accent: minimal but elegant
+
+---
+
+🧱 COMPONENTS TO REDESIGN:
+
+1. Navigation (top bar or sidebar)
+   - Clean, minimal, with icons
+   - Sticky and responsive
+
+2. Main dashboard / layout
+   - Proper spacing and grid alignment
+   - Cards with hover states
+   - Smooth transitions
+
+3. Video/media UI (core of clapshot)
+   - Beautiful player UI
+   - Custom controls (modern, minimal)
+   - Timeline + interactions feel smooth and responsive
+
+4. Buttons
+   - Subtle hover animations
+   - Soft gradients or outline styles
+
+5. Forms / Inputs
+   - Clean, minimal, with focus states
+   - No ugly borders
+
+6. Modals / Popups
+   - Centered, blurred background
+   - Smooth entry/exit animation
+
+7. Empty states
+   - Elegant and helpful, not boring
+
+---
+
+⚡ INTERACTIONS:
+
+- Add micro-interactions everywhere (hover, click, transitions)
+- Use Framer Motion or CSS transitions
+- Animations should feel fast and smooth (200–300ms)
+
+---
+
+📱 RESPONSIVENESS:
+
+- Fully responsive (desktop first, but clean mobile layout too)
+- Collapse sidebar intelligently
+
+---
+
+🧠 UX IMPROVEMENTS:
+
+- Simplify user flows
+- Remove clutter
+- Improve readability and spacing
+- Make actions obvious and intuitive
+
+---
+
+🛠 TECH:
+
+- Use React (or current stack if already set)
+- Use TailwindCSS
+- Use reusable components
+- Keep code clean and modular
+
+---
+
+🚀 OUTPUT EXPECTATION:
+
+- Rewrite the layout and UI components
+- Provide updated code (not just suggestions)
+- Ensure everything looks cohesive as a design system
+- Make it feel like a polished startup product, not a hackathon project
+
+---
+
+💡 EXTRA:
+
+If something feels outdated, redesign it completely.
+If something feels missing, add it.
+
+Think like: “Would this impress a YC investor or a product designer at Apple?”
+
+---
+
+Now begin the full UI transformation.

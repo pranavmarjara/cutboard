@@ -1,0 +1,160 @@
+You are a senior product designer and frontend engineer from a top SaaS company like Linear, Vercel, or Notion.
+
+Your task is to completely redesign and refine the branding, copy, and UI of this product while keeping the name "CutBoard".
+
+⚠️ IMPORTANT:
+This is NOT just a UI update.
+You must improve:
+- Branding
+- Messaging
+- UX clarity
+- Visual hierarchy
+
+---
+
+🎯 BRAND POSITIONING:
+
+CutBoard is a premium, fast, modern video review and collaboration tool.
+
+It should feel:
+- Fast
+- Minimal
+- Powerful
+- Professional (not playful, not cluttered)
+
+---
+
+✍️ COPYWRITING (CRITICAL):
+
+Rewrite ALL visible text to be:
+- Sharp
+- Concise
+- Confident
+- No fluff, no buzzwords
+
+Avoid:
+- “AI-powered insights”
+- “kanban-style platform”
+- long paragraphs
+
+---
+
+🏆 HERO SECTION (MANDATORY STRUCTURE):
+
+Replace existing hero with:
+
+Title:
+CutBoard
+
+Subtitle (ONE short line max):
+Review video. Move faster.
+
+Description (1–2 lines max):
+Upload footage, leave timestamped feedback, and collaborate in real time — without messy threads or endless revisions.
+
+CTAs:
+[ Upload Video ] (primary)
+[ View Demo ] (secondary)
+
+---
+
+🎨 DESIGN SYSTEM:
+
+- Dark mode first
+- Clean, minimal layout
+- Inspired by Linear, Vercel, Notion
+
+Use:
+- TailwindCSS
+- Inter font
+- 8px spacing system
+
+Colors:
+- Background: deep dark (#0B0F14)
+- Text: soft white/gray
+- Accent: subtle blue or purple gradient
+
+Style:
+- Rounded corners (xl/2xl)
+- Soft shadows
+- No harsh borders
+- Lots of whitespace
+
+---
+
+🧱 UI IMPROVEMENTS:
+
+Redesign ALL major parts:
+
+1. Navigation
+   - Minimal, clean
+   - Logo + few key actions
+   - Sticky
+
+2. Dashboard
+   - Card-based layout
+   - Clear hierarchy
+   - Clean spacing
+
+3. Video Player UI
+   - Modern controls
+   - Minimal timeline
+   - Smooth interactions
+
+4. Comments / Collaboration
+   - Timestamped comments look clean and readable
+   - No clutter
+
+5. Buttons
+   - Subtle hover animations
+   - Premium feel
+
+6. Empty States
+   - Helpful and elegant
+
+---
+
+⚡ INTERACTIONS:
+
+- Add smooth micro-interactions (200–300ms)
+- Hover, click, transitions
+- Use Framer Motion or CSS transitions
+
+---
+
+📱 RESPONSIVENESS:
+
+- Fully responsive
+- Clean mobile layout
+- Collapse navigation intelligently
+
+---
+
+🧠 UX FOCUS:
+
+- Reduce cognitive load
+- Make primary action obvious (upload & review video)
+- Remove anything unnecessary
+
+---
+
+🚀 OUTPUT REQUIREMENTS:
+
+- Rewrite UI components with improved structure
+- Replace old text with sharp, minimal copy
+- Ensure consistency across entire app
+- Make it feel like a premium SaaS product ready for launch
+
+---
+
+💡 FINAL RULE:
+
+If anything feels:
+- outdated → redesign it
+- verbose → shorten it
+- cluttered → simplify it
+
+Think:
+“Would this look at home on Vercel.com or Linear.app?”
+
+Now begin full redesign.

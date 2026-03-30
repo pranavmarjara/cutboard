@@ -1,0 +1,16 @@
+{
+    "ws_url": "ws://127.0.0.1:8095/api/ws",
+    "upload_url": "http://127.0.0.1:8095/api/upload",
+    "user_menu_extra_items": [
+        { "label": "My Videos", "type": "url", "data": "/"}
+    ],
+    "user_menu_show_basic_auth_logout": false,
+
+    "logo_url": "clapshot-logo.svg",
+    "app_title": "CutBoard",
+
+    "default_locale": "en",
+    "supported_locales": ["en", "zh"],
+
+    "enable_mediabunny": true
+}

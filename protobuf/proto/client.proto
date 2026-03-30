@@ -1,0 +1,175 @@
+syntax = "proto3";
+package clapshot.client;
+
+import public "common.proto";
+
+import "google/protobuf/timestamp.proto";
+
+// ----------------------------------------
+// Server <-> client communication messages
+// ----------------------------------------
+
+// These are internal and may change between versions -- don't use in Organizer code
+
+message ServerToClientCmd {
+    message Welcome {
+        UserInfo user = 1;
+        bool is_admin = 2;              // FYI for the client UI, server will enforce the actual permissions
+        string server_version = 3;
+    }
+    message Error {
+        string msg = 1;
+    }
+    message ShowPage {
+        repeated PageItem page_items = 1;
+        optional string page_id = 2;
+        optional string page_title = 3;
+    }
+    message DefineActions {
+        map<string, ActionDef> actions = 1;
+    }
+    message ShowMessages {
+        repeated UserMessage msgs = 1;
+    }
+    message OpenMediaFile {
+        MediaFile media_file = 1;
+    }
+    message AddComments {
+        repeated Comment comments = 1;
+    }
+    message DelComment {
+        string comment_id = 1;
+    }
+    message CollabEvent {
+        string from_user = 1;
+        bool paused = 2;
+        bool loop = 3;
+        double seek_time_sec = 4;       // From start of media file
+        optional string drawing = 5;    // data-uri of an image
+        optional string subtitle_id = 6;
+    }
+    message SetCookies {
+        map<string, string> cookies = 1;        // Cookies to set. Use empty string to delete a cookie.
+        google.protobuf.Timestamp expire_time = 2;
+    }
+
+    oneof cmd {
+        Welcome welcome = 10;
+        Error error = 20;
+        ShowPage show_page = 30;
+        DefineActions define_actions = 40;
+        ShowMessages show_messages = 50;
+        OpenMediaFile open_media_file = 60;
+        AddComments add_comments = 70;
+        DelComment del_comment = 80;
+        CollabEvent collab_event = 90;
+        SetCookies set_cookies = 100;
+    }
+}
+
+message ClientToServerCmd {
+    message OpenNavigationPage {
+        optional string page_id = 1;
+    }
+    message OpenMediaFile {
+        string media_file_id = 1;
+    }
+    message DelMediaFile {
+        string media_file_id = 1;
+    }
+    message RenameMediaFile {
+        string media_file_id = 1;
+        string new_name = 2;
+    }
+    message AddComment {
+        string media_file_id = 1;
+        string comment = 2;
+        optional string timecode = 3;
+        optional string parent_id = 4;
+        optional string drawing = 5;
+        optional string subtitle_id = 6;
+    }
+    message EditComment {
+        string comment_id = 1;
+        string new_comment = 2;
+    }
+    message DelComment {
+        string comment_id = 1;
+    }
+
+    message AddSubtitle {
+        string media_file_id = 1;
+        string file_name = 2;
+        string contents_base64 = 3;
+    }
+    message EditSubtitleInfo {
+        string id = 1;
+        optional string title = 2;
+        optional string language_code = 3;
+        optional float time_offset = 4;
+        optional bool is_default = 5;
+    }
+    message DelSubtitle {
+        string id = 1;
+    }
+
+    message ListMyMessages {
+    }
+    message JoinCollab {
+        string collab_id = 1;
+        string media_file_id = 2;
+    }
+    message LeaveCollab {
+    }
+    message CollabReport {
+        bool paused = 1;
+        bool loop = 2;
+        double seek_time_sec = 3;
+        optional string drawing = 4;
+        optional string subtitle_id = 5;
+    }
+    message OrganizerCmd {
+        string cmd = 1;
+        string args = 2;
+    }
+    message MoveToFolder {
+        string dst_folder_id = 1;
+        repeated FolderItemID ids = 2;
+        map<string, string> listing_data = 3;
+    }
+    message ReorderItems {
+        repeated FolderItemID ids = 1;
+        map<string, string> listing_data = 2;
+    }
+    message Logout {
+    }
+
+    oneof cmd {
+        OpenNavigationPage open_navigation_page = 10;
+
+        OpenMediaFile open_media_file = 20;
+        DelMediaFile del_media_file = 30;
+        RenameMediaFile rename_media_file = 40;
+
+        AddComment add_comment = 50;
+        EditComment edit_comment = 60;
+        DelComment del_comment = 70;
+
+        AddSubtitle add_subtitle = 75;
+        EditSubtitleInfo edit_subtitle_info = 76;
+        DelSubtitle del_subtitle = 77;
+
+        ListMyMessages list_my_messages = 80;
+
+        JoinCollab join_collab = 90;
+        LeaveCollab leave_collab = 100;
+        CollabReport collab_report = 110;
+
+        OrganizerCmd organizer_cmd = 120;
+
+        MoveToFolder move_to_folder = 130;
+        ReorderItems reorder_items = 140;
+
+        Logout logout = 150;
+    }
+}
