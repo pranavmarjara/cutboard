@@ -33,11 +33,13 @@
         --text-primary:   #C8D3E8;
         --text-secondary: #6B7A99;
         --text-muted:     #3A4259;
-        --accent-blue:    #4F8EF7;
-        --accent-purple:  #7B5EA7;
+        --accent-blue:    #3B82F6;
+        --accent-purple:  #8B5CF6;
+        --accent-pink:    #EC4899;
         --accent-green:   #34D399;
         --accent-amber:   #F59E0B;
         --accent-red:     #F87171;
+        --brand-gradient: linear-gradient(135deg, #EC4899, #8B5CF6, #3B82F6);
 }
 
 /* ===========================

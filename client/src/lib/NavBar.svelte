@@ -68,7 +68,7 @@ function logoutBasicAuth() {
 }
 
 function showAbout() {
-        alert("CutBoard v" + process.env.CLAPSHOT_CLIENT_VERSION + "\n" +
+        alert("Clipyfy v" + process.env.CLAPSHOT_CLIENT_VERSION + "\n" +
                 "Review video. Move faster.\n" +
                 "\n" +
                 "Built on Clapshot · github.com/elonen/clapshot");
@@ -106,11 +106,11 @@ function addEDLComments(comments: Proto3.Comment[]) {
             <img
                 src="{$clientConfig ? ($clientConfig?.logo_url || 'clapshot-logo.svg') : ''}"
                 class="h-7 w-7 object-contain"
-                alt="{$clientConfig ? ($clientConfig.app_title || 'CutBoard') : ''}"
+                alt="{$clientConfig ? ($clientConfig.app_title || 'Clipyfy') : ''}"
             />
         </div>
         <span class="nav-logo-text">
-            {($clientConfig ? ($clientConfig.app_title || "CutBoard") : "").toUpperCase()}
+            {$clientConfig ? ($clientConfig.app_title || "Clipyfy") : ""}
         </span>
     </a>
 
@@ -272,11 +272,14 @@ function addEDLComments(comments: Proto3.Comment[]) {
 }
 
 .nav-logo-text {
-    font-size: 0.9rem;
+    font-size: 1rem;
     font-weight: 700;
-    letter-spacing: 0.15em;
-    color: #8A9BBD;
+    letter-spacing: -0.01em;
     font-family: 'Inter', sans-serif;
+    background: linear-gradient(90deg, #F472B6 0%, #A78BFA 50%, #60A5FA 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
 }
 
 .video-info-pill {

@@ -293,7 +293,7 @@ const COLORS = [
     align-items: center;
     height: 32px;
     padding: 0 14px;
-    background: linear-gradient(135deg, #4F8EF7, #7B5EA7);
+    background: linear-gradient(135deg, #EC4899, #8B5CF6, #3B82F6);
     color: white;
     border: none;
     border-radius: 7px;
@@ -305,9 +305,9 @@ const COLORS = [
     flex-shrink: 0;
 }
 .send-btn:hover {
-    filter: brightness(1.1);
+    filter: brightness(1.12);
     transform: translateY(-1px);
-    box-shadow: 0 4px 12px rgba(79,142,247,0.3);
+    box-shadow: 0 4px 14px rgba(139,92,246,0.35);
 }
 .send-btn:active {
     transform: translateY(0);

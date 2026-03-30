@@ -1,0 +1,104 @@
+You are a senior product designer and frontend engineer.
+
+Your task is to fully rebrand the UI and logo from "CutBoard" to "Clipyfy" using the attached image as visual inspiration.
+
+⚠️ IMPORTANT:
+Do NOT just replace text.
+You must redesign the branding to feel intentional, modern, and premium.
+
+---
+
+🎯 BRAND NAME:
+
+Clipyfy
+
+---
+
+🎨 VISUAL DIRECTION (from the image):
+
+- Dark gradient background (deep navy/black)
+- Soft glowing elements
+- Purple → pink → blue gradient accents
+- Smooth, glossy, modern 3D-like icon style
+- Clean, minimal, premium SaaS aesthetic
+
+---
+
+🧠 LOGO REDESIGN (CRITICAL):
+
+Recreate the logo based on the image style but optimized for Clipyfy:
+
+- Keep the concept: media + editing (film strip + tool)
+- Simplify the icon (less clutter, more iconic)
+- Make it scalable (works as favicon too)
+- Remove unnecessary elements (like sparkles if too distracting)
+
+Text:
+- Replace "CutBoard" with "Clipyfy"
+- Use modern sans-serif (Inter / Satoshi style)
+- Apply gradient ONLY subtly (not overdone)
+
+---
+
+🧱 UI REBRANDING TASK:
+
+Update ALL UI elements:
+
+1. Replace ALL instances of "CutBoard" → "Clipyfy"
+
+2. Navigation:
+   - Add new Clipyfy logo
+   - Clean spacing and alignment
+
+3. Hero Section:
+   Title: Clipyfy
+   Subtitle: Review video. Move faster.
+   Keep it minimal and premium
+
+4. Colors:
+   - Background: #0B0F14 or similar
+   - Accent: gradient (purple → blue)
+   - Text: soft white/gray
+
+5. Components:
+   - Buttons: gradient hover effects
+   - Cards: subtle glow + shadow
+   - Inputs: clean, no harsh borders
+
+---
+
+⚡ INTERACTIONS:
+
+- Smooth transitions (200–300ms)
+- Subtle hover glow
+- Premium feel (no flashy animations)
+
+---
+
+📱 RESPONSIVENESS:
+
+- Fully responsive
+- Logo and layout adapt cleanly on mobile
+
+---
+
+🚀 OUTPUT REQUIREMENTS:
+
+- Update logo (SVG or component)
+- Replace all branding references
+- Ensure consistent design system
+- Make UI feel like a polished SaaS product
+
+---
+
+💡 FINAL RULE:
+
+If anything looks:
+- cluttered → simplify it
+- outdated → modernize it
+- inconsistent → unify it
+
+Think:
+“Would this look like a product from Vercel or Linear?”
+
+Now begin full rebrand to Clipyfy.

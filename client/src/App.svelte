@@ -1035,7 +1035,7 @@ function onMediaFileListPopupAction(e: { detail: { action: Proto3.ActionDef, ite
                 </div>
 
                 <!-- Wordmark -->
-                <h1 class="hero-title">CutBoard</h1>
+                <h1 class="hero-title">Clipyfy</h1>
 
                 <!-- Tagline -->
                 <p class="hero-tagline">Review video. Move faster.</p>
@@ -1328,18 +1328,19 @@ function onMediaFileListPopupAction(e: { detail: { action: Proto3.ActionDef, ite
     pointer-events: none;
 }
 
-/* Top radial accent glow */
+/* Top radial accent glow — Clipyfy purple */
 .hero-glow {
     position: absolute;
     top: -200px;
     left: 50%;
     transform: translateX(-50%);
-    width: 800px;
-    height: 600px;
+    width: 900px;
+    height: 640px;
     background: radial-gradient(ellipse at center,
-        rgba(79,142,247,0.08) 0%,
-        rgba(123,94,167,0.05) 40%,
-        transparent 70%
+        rgba(139,92,246,0.10) 0%,
+        rgba(236,72,153,0.06) 35%,
+        rgba(59,130,246,0.04) 60%,
+        transparent 75%
     );
     pointer-events: none;
 }
@@ -1364,11 +1365,11 @@ function onMediaFileListPopupAction(e: { detail: { action: Proto3.ActionDef, ite
     gap: 7px;
     padding: 4px 12px 4px 10px;
     border-radius: 20px;
-    background: rgba(79,142,247,0.08);
-    border: 1px solid rgba(79,142,247,0.18);
+    background: rgba(139,92,246,0.08);
+    border: 1px solid rgba(139,92,246,0.2);
     font-size: 0.72rem;
     font-weight: 500;
-    color: #6B9EF7;
+    color: #C4B5FD;
     letter-spacing: 0.02em;
 }
 
@@ -1376,22 +1377,22 @@ function onMediaFileListPopupAction(e: { detail: { action: Proto3.ActionDef, ite
     width: 6px;
     height: 6px;
     border-radius: 50%;
-    background: #4F8EF7;
-    box-shadow: 0 0 8px #4F8EF7;
+    background: #A78BFA;
+    box-shadow: 0 0 10px #8B5CF6;
     animation: badge-pulse 2s ease-in-out infinite;
 }
 @keyframes badge-pulse {
     0%, 100% { opacity: 1; }
-    50% { opacity: 0.4; }
+    50% { opacity: 0.35; }
 }
 
-/* Wordmark */
+/* Wordmark — Clipyfy pink → purple → blue gradient */
 .hero-title {
     font-size: clamp(2.5rem, 8vw, 4.5rem);
     font-weight: 800;
     letter-spacing: -0.04em;
     line-height: 1;
-    background: linear-gradient(135deg, #E8EEFF 0%, #8AABF7 50%, #C4A8FF 100%);
+    background: linear-gradient(110deg, #F9A8D4 0%, #A78BFA 45%, #93C5FD 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -1431,19 +1432,20 @@ function onMediaFileListPopupAction(e: { detail: { action: Proto3.ActionDef, ite
     align-items: center;
     padding: 11px 24px;
     border-radius: 10px;
-    background: linear-gradient(135deg, #4F8EF7, #7B5EA7);
+    background: linear-gradient(135deg, #EC4899, #8B5CF6, #3B82F6);
+    background-size: 200% 200%;
     color: white;
     font-size: 0.88rem;
     font-weight: 600;
     border: none;
     cursor: pointer;
     transition: all 200ms ease;
-    box-shadow: 0 0 0 1px rgba(79,142,247,0.3), 0 8px 24px rgba(79,142,247,0.2);
+    box-shadow: 0 0 0 1px rgba(139,92,246,0.3), 0 8px 24px rgba(139,92,246,0.25);
 }
 .hero-btn-primary:hover:not(:disabled) {
     transform: translateY(-2px);
-    box-shadow: 0 0 0 1px rgba(79,142,247,0.5), 0 12px 32px rgba(79,142,247,0.3);
-    filter: brightness(1.08);
+    box-shadow: 0 0 0 1px rgba(139,92,246,0.5), 0 12px 32px rgba(139,92,246,0.35);
+    filter: brightness(1.1);
 }
 .hero-btn-primary:disabled {
     opacity: 0.45;

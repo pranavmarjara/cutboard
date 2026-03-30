@@ -6,8 +6,8 @@
     ],
     "user_menu_show_basic_auth_logout": false,
 
-    "logo_url": "clapshot-logo.svg",
-    "app_title": "CutBoard",
+    "logo_url": "clipyfy-logo.svg",
+    "app_title": "Clipyfy",
 
     "default_locale": "en",
     "supported_locales": ["en", "zh"],
